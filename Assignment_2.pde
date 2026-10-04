@@ -13,7 +13,8 @@ println("His end goal is winning the World Cup with his country England so every
 println("He has a choice between leaving the club or staying to make a name for himself and carry the club back to the glory they were once in.");
 
 String shouldHeStay = Ask.forString("Should he stay or should he leave?");
-if (shouldHeStay.equals (answerYes)) {
+// researched the ".equalsIgnoreCase" to find out how to allow the input to work whether it is lower case or upper case.
+if (shouldHeStay.equalsIgnoreCase (answerYes)) {
   println("Sakar stays.");
   println("He stays on the bench for the full season.");
   println("The player in his position the previous season ends up leaving the club the next season after Arsenal failed to make top 4.");
@@ -27,23 +28,28 @@ if (shouldHeStay.equals (answerYes)) {
   println("He has two choices, get surgery which would take him out for 3 months plus an additional month for recovery or he could rest and recover without surgery for 2 months and comeback strong but with a risk of it getting worse.");
 
   String shouldHeGetSurgery = Ask.forString("Should he get surgery?");
-  if (shouldHeGetSurgery.equals (answerYesSurgery)) {
+  if (shouldHeGetSurgery.equalsIgnoreCase (answerYesSurgery)) {
     println("He’s out for 4 months and comes back on the bench but gets back to starting and ends up scoring 20 and assisting 5.");
     println("After this, Sakar ends up recovering fully and getting his regular minutes back, he performs well and scores 20 goals and 30 assists and is called up for the England World Cup squad. He scores 7 and assists 2 in the World Cup while even scoring in the final to help England win their second World Cup in history.");
-  } else if (shouldHeGetSurgery.equals (answerNoSurgery)) {
+    println("YOU WIN!!");
+  } else if (shouldHeGetSurgery.equalsIgnoreCase (answerNoSurgery)) {
     println("He’s out resting for 2 months but then comes back but his minutes are managed and ends up only scoring 14 and assisting 5.");
     println(" He gets rested and recovered but his minutes are still being managed so he doesn’t get injured again.");
     println("Fortunately, he still makes the World Cup squad and is a starter for England, he only gets 4 goals and 3 assists and he got subbed off in the 80th minute in the final but he still got to lift the World Cup as his teammates finished the job after 120 minutes and wins the World Cup.");
+    println("YOU WIN!!");
   }
-} else if (shouldHeStay.equals (answerNo)) {
+} else if (shouldHeStay.equalsIgnoreCase (answerNo)) {
   println("He gets transferred to Dortmund football club and helps them beat the league’s biggest club in Bayern Munich, while scoring 30 and delivering 19 assists. He also helped Dortmund qualify for UCL the next season.");
   println("After 3 years at Dortmund, he scored 60 and delivered 56 assists, then he moves to PSG and establishes himself as one of the best left wingers in the world. He gets to the UCL final with PSG and must face the club that established him as a pro, Arsenal FC.");
   println("He loses the UCL final penalties and loses 5-4 on penalties. He scored his penalty, but his teammate missed the last penalty that in turn made them lose the final.");
   println("After losing the UCL final, he has two options, stay and try to win the UCL or leave to Real Madrid who want to sign him. ");
-  String shouldHeStayPsg = Ask.forString("Should he stay at PSG?");
-  if (shouldHeStayPsg.equals (answerYesPsg)) {
+  String shouldHeStayPsg = Ask.forString("Should he stay at PSG or leave?");
+  if (shouldHeStayPsg.equalsIgnoreCase (answerYesPsg)) {
     println("He goes to the UCL final again but this time against Bayern but ends up losing 4-0 in the final. He does score 15 goals and 10 assists and wins 4 trophies with PSG.");
-  } else if (shouldHeStayPsg.equals (answerNoPsg)) {
-    println("He ends up getting a stinker season by his standards by only scoring 10 and assisting 3 the whole season. Real Madrid only wins the Copa Del Rey and loses the Laliga to Barca and gets knocked out of UCL early on.");
+    println("He makes the World Cup squad but he gets knocked out in the quarter finals.");
+  } else if (shouldHeStayPsg.equalsIgnoreCase (answerNoPsg)) {
+    println("He ends up getting a stinker season by his standards by only scoring 10 and assisting 3 the whole season.");
+    println("Real Madrid only wins the Copa Del Rey and loses the Laliga to Barca and gets knocked out of UCL early on. He doesn't make the World Cup squad.");
+    println("YOU FAILED!");
   }
 }
