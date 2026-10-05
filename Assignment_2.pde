@@ -68,7 +68,7 @@ if (shouldHeStay.equalsIgnoreCase (answerYes)) {
 }
 
 println("He wins" + " " + int (random(0, 5)) + " Ballon D'or(s) in his whole career." );
-println("He wins" + " " + int (random (0, 1)) + " " + "Super Ballon D'ors in his career.");
+println("He wins" + " " + int (random (0, 1)) + " " + "Super Ballon D'or(s) in his career.");
 
 String shouldHeRetire = Ask.forString ("Should he retire after only 35 years of age?");
 if (shouldHeRetire.equalsIgnoreCase (answerYesRetire)) {
